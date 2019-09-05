@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="5909ba7a-a2e4-4b46-9c43-67562a78c9bb" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.editorconfig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitattributes" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.htaccess" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/廖雪峰JavaScript.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/404.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LICENSE.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/browserconfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/normalize.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/TOC.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/css.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/extend.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/faq.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/html.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/js.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/misc.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/usage.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/humans.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/1、快速入门/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/1、快速入门/基本语法、字符串、数组.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/1、快速入门/对象.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/plugins.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/vendor/jquery-3.4.1.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/vendor/modernizr-3.7.1.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/robots.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/site.webmanifest" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tile-wide.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tile.png" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JsBowerSettings">
+    <node-interpreter value="project" />
+    <bower-package value="" />
+    <bower.json value="" />
+  </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
+  <component name="ProjectId" id="1QMHISBMtDI49xSCiPhvClwkK3V" />
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="javascript.nodejs.core.library.configured.version" value="12.9.1" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_interpreter_path" value="E:/Program Files/nodejs/node" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="com.nnthink.aixcoder.config.Config" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="G:\webstorm\廖雪峰JavaScript\js\1、快速入门" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Node.js.高阶,以函数作参数.js">
+    <configuration name="404.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/廖雪峰JavaScript/404.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/廖雪峰JavaScript/js/1、快速入门/index.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="变量,常量,解构,作用域.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/js/2、函数/变量,常量,解构,作用域.js" working-dir="$PROJECT_DIR$/js/2、函数">
+      <method v="2" />
+    </configuration>
+    <configuration name="高阶,以函数作参数.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="高阶,以函数作参数.js" working-dir="$PROJECT_DIR$/js/2、函数">
+      <method v="2" />
+    </configuration>
+    <configuration name="方法,this,装饰器.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/js/2、函数/方法,this,装饰器.js" working-dir="$PROJECT_DIR$/js/2、函数">
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="JavaScript Debug.404.html" />
+      <item itemvalue="JavaScript Debug.index.html" />
+      <item itemvalue="Node.js.变量,常量,解构,作用域.js" />
+      <item itemvalue="Node.js.方法,this,装饰器.js" />
+      <item itemvalue="Node.js.高阶,以函数作参数.js" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Node.js.高阶,以函数作参数.js" />
+        <item itemvalue="Node.js.方法,this,装饰器.js" />
+        <item itemvalue="Node.js.变量,常量,解构,作用域.js" />
+        <item itemvalue="JavaScript Debug.index.html" />
+        <item itemvalue="JavaScript Debug.404.html" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5909ba7a-a2e4-4b46-9c43-67562a78c9bb" name="Default Changelist" comment="" />
+      <created>1567573465168</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1567573465168</updated>
+      <workItem from="1567573467293" duration="9353000" />
+      <workItem from="1567599048410" duration="670000" />
+      <workItem from="1567645307728" duration="2496000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
