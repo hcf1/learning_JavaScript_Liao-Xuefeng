@@ -41,7 +41,7 @@ var r = arr.filter(function (x) {
   return x % 2 !== 0;
 });
 console.log(r); // [1, 5, 9, 15]
-// 排序算法:满足对于两个元素x和y，如果认为x < y，则返回-1，如果认为x==y，则返回0...
+// 排序算法:满足对于两个元素x和y，如果认为x < y，返回-1或小于0的数，x==y，返回0
 // sort方法会先将所有元素先转换为String再排序，结果'10'排在了'2'的前面
 // 因为字符'1'比字符'2'的ASCII码小。---------------------------------------
 console.log([10, 20, 1, 2].sort()); // [1, 10, 2, 20]
@@ -49,16 +49,16 @@ console.log([10, 20, 1, 2].sort()); // [1, 10, 2, 20]
 var b = [10, 20, 1, 2]
 b.sort(function (x, y) {
   if (x > y) {
-    return 1;
+    return 0.001;
   }
   else if (x < y) {
-    return -1;
+    return -0.1;
   }
   else {
     return 0;
   }
 })
-console.log(b);
+console.log("排序结果："+b);
 // every，可以判断数组的所有元素是否满足测试条件。----------------------------
 console.log([0, 0,'sfaf','dd'].every(function(x) {
   return x.length > 1;
