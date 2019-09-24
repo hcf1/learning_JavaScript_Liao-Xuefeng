@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5909ba7a-a2e4-4b46-9c43-67562a78c9bb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.vscode/launch.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/3、标准对象/date、regexp、json.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/3、标准对象/标准对象.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/廖雪峰JavaScript.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/廖雪峰JavaScript.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/3、标准对象/date、regexp、json.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/3、标准对象/date、regexp、json.js" afterDir="false" />
+    </list>
+    <list id="4e357464-b787-476d-b6ba-4b0a6301a7db" name="1" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -36,6 +39,9 @@
     <auto-save>true</auto-save>
   </component>
   <component name="ProjectId" id="1QMHISBMtDI49xSCiPhvClwkK3V" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -50,7 +56,7 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path" value="E:/Program Files/nodejs/node" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="com.nnthink.aixcoder.config.Config" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.uml" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -69,10 +75,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Node.js.高阶,以函数作参数.js">
-    <configuration name="404.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/廖雪峰JavaScript/404.html" useBuiltInWebServerPort="true">
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Node.js.date、regexp、json.js">
     <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/廖雪峰JavaScript/js/1、快速入门/index.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
@@ -85,22 +88,32 @@
     <configuration name="方法,this,装饰器.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/js/2、函数/方法,this,装饰器.js" working-dir="$PROJECT_DIR$/js/2、函数">
       <method v="2" />
     </configuration>
+    <configuration name="date、regexp、json.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="date、regexp、json.js" working-dir="$PROJECT_DIR$/js/3、标准对象">
+      <EXTENSION ID="com.jetbrains.nodejs.run.NodeJSStartBrowserRunConfigurationExtension">
+        <browser with-js-debugger="true" />
+      </EXTENSION>
+      <method v="2" />
+    </configuration>
     <list>
-      <item itemvalue="JavaScript Debug.404.html" />
       <item itemvalue="JavaScript Debug.index.html" />
       <item itemvalue="Node.js.变量,常量,解构,作用域.js" />
       <item itemvalue="Node.js.高阶,以函数作参数.js" />
       <item itemvalue="Node.js.方法,this,装饰器.js" />
+      <item itemvalue="Node.js.date、regexp、json.js" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Node.js.date、regexp、json.js" />
         <item itemvalue="Node.js.高阶,以函数作参数.js" />
         <item itemvalue="Node.js.方法,this,装饰器.js" />
         <item itemvalue="Node.js.变量,常量,解构,作用域.js" />
         <item itemvalue="JavaScript Debug.index.html" />
-        <item itemvalue="JavaScript Debug.404.html" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="SshConsoleOptionsProvider">
+    <option name="myEncoding" value="UTF-8" />
+    <option name="myConnectionType" value="NONE" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -117,6 +130,10 @@
       <workItem from="1567645307728" duration="3125000" />
       <workItem from="1567731878770" duration="869000" />
       <workItem from="1567745965664" duration="1272000" />
+      <workItem from="1568184169936" duration="1373000" />
+      <workItem from="1569305029229" duration="1540000" />
+      <workItem from="1569310093669" duration="107000" />
+      <workItem from="1569310305301" duration="4159000" />
     </task>
     <servers />
   </component>
@@ -313,12 +330,6 @@
     <option name="OPEN_TABS">
       <set>
         <option value="1" />
-        <option value="2" />
-        <option value="3" />
-        <option value="4" />
-        <option value="5" />
-        <option value="6" />
-        <option value="7" />
       </set>
     </option>
   </component>
