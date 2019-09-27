@@ -2,14 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5909ba7a-a2e4-4b46-9c43-67562a78c9bb" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/廖雪峰JavaScript.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/廖雪峰JavaScript.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/3、标准对象/date、regexp、json.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/3、标准对象/date、regexp、json.js" afterDir="false" />
-    </list>
-    <list id="4e357464-b787-476d-b6ba-4b0a6301a7db" name="1" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
+    <list id="4e357464-b787-476d-b6ba-4b0a6301a7db" name="1" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,7 +128,7 @@
       <workItem from="1568184169936" duration="1373000" />
       <workItem from="1569305029229" duration="1540000" />
       <workItem from="1569310093669" duration="107000" />
-      <workItem from="1569310305301" duration="4159000" />
+      <workItem from="1569310305301" duration="4784000" />
     </task>
     <servers />
   </component>
