@@ -1,0 +1,16 @@
+<html>
+
+<body>
+    <div id="to-be-removed"></div>
+  <script>
+    // 拿到待删除节点:
+    var self = document.getElementById('to-be-removed');
+    // 拿到父节点:
+    var parent = self.parentElement;
+    // 删除:
+    var removed = parent.removeChild(self);
+    console.log(removed === self);//true
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,88 @@
+<!-- HTML表单的输入控件主要有以下几种：
+
+文本框，对应的<input type="text">，用于输入文本；
+
+口令框，对应的<input type="password">，用于输入口令；
+
+单选框，对应的<input type="radio">，用于选择一项；
+
+复选框，对应的<input type="checkbox">，用于选择多项；
+
+下拉框，对应的<select>，用于选择一项；
+
+隐藏文本，对应的<input type="hidden">，用户不可见，但表单提交时会把隐藏文本发送到服务器。 -->
+
+<!-- 获取值 -->
+<html>
+
+<body>
+  <input type="text" name="" id="email" value="dlf">
+  <script>
+    var input = document.getElementById('email')
+    // 可直接获取input输入的值
+    console.log(input.value);
+
+  </script>
+  <!-- setting the value of radio and checking if it has been checked======================-->
+  <label><input type="radio" name="weekday" id="monday" value="1"> Monday</label>
+  <label><input type="radio" name="weekday" id="tuesday" value="2"> Tuesday</label>
+  <script>
+    var mon = document.getElementById('monday');
+    var tue = document.getElementById('tuesday');
+    mon.value; // '1'
+    tue.value; // '2'
+    // checked or not?
+    console.log(mon.checked, tue.checked);
+
+  </script>
+  <!-- set value ==========================================================================-->
+  <!-- for text、password、hidden and select，we can set their value directly -->
+  <script>
+    input.value = 'dkhfkdhfk'
+    mon.checked = true
+
+  </script>
+  <!-- html5 attribute-->
+  <input type="date" value="2015-07-01">
+  <input type="datetime-local" value="2015-07-01T02:03:04">
+  <input type="color" value="#ff0000">
+  <!-- 提交表单===============================================================================
+    最后，JavaScript可以以两种方式来处理表单的提交（AJAX方式在后面章节介绍）。
+    方式一是通过<form>元素的submit()方法提交一个表单，例如，
+    响应一个<button>的click事件，在JavaScript代码中提交表单： -->
+  <form id="test-form">
+    <input type="text" name="test">
+    <button type="button" onclick="doSubmitForm()">Submit</button>
+  </form>
+
+  <script>
+    function doSubmitForm() {
+      var form = document.getElementById('test-form');
+      // 可以在此修改form的input...
+      // 提交form:
+      form.submit();
+    }
+
+  </script>
+  <!-- 第二种方式是响应<form>本身的onsubmit事件，在提交form时作修改：------------------------- -->
+  <form id="test-form" onsubmit="checkForm()">
+    <input type="text" name="test">
+    <button type="submit">Submit</button>
+  </form>
+
+  <script>
+    function checkForm() {
+      var form = document.getElementById('test-form');
+      console.log('提交成功');
+      // 可以在此修改form的input...
+      // 继续下一步:
+      return true;
+    }
+
+  </script>
+  <!-- 注意要return true来告诉浏览器继续提交，如果return false，浏览器将不会继续提交form，
+    这种情况通常对应用户输入有误，提示用户错误信息后终止提交form。
+  在检查和修改<input>时，要充分利用<input type="hidden">来传递数据。 -->
+</body>
+
+</html>

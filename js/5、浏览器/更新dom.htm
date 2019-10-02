@@ -1,0 +1,65 @@
+<html>
+
+<body>
+  <!-- 使用innerHtml修改dom元素内容 -->
+  <p id="p-id"></p>
+  <script>
+    // 获取<p id="p-id">...</p>
+    var p = document.getElementById('p-id');
+    // 设置文本为abc:
+    p.innerHTML = 'ABC'; // <p id="p-id">ABC</p>
+    // 设置HTML:
+    p.innerHTML = 'ABC <span style="color:red">RED</span> XYZ';
+    // 在JavaScript使用驼峰表达(font-size不能作为JavaScript的变量)
+    p.style.color = '#ff0000';
+    p.style.fontSize = '20px';
+    p.style.paddingTop = '2em';
+    // innerText返回看得见的内容，textContent返回所有包括看不见的内容============================
+
+  </script>
+  <div class="test" id="test">
+    test
+    <!-- 不显示 -->
+    <div style="display:none">
+      <span>
+        test
+      </span>
+    </div>
+    <p>
+      hi
+    </p>
+  </div>
+  <script type="text/javascript">
+    var testDiv = document.getElementById('test');
+    // 取子标签内容且不解释标签，样式设置无效，保留html排版格式
+    console.log("我是textContent输出的" + testDiv.textContent);
+    // 不会取子标签里的内容，不保留html格式
+    console.log("我是innerText输出的" + testDiv.innerText);
+    // 输出==================================================
+    //     我是textContent输出的
+    //             test
+
+
+    //                     test
+
+
+
+    //                 hi
+
+    // ======================================================
+    // 我是innerText输出的test
+    // hi
+    // ======================================================
+    // 差异：
+    // 1. textContent不会理会html格式，直接输出不换行的文本
+    // 2. innerText会根据标签里面的元素独立一行
+    // 3.兼容性：
+    // innerText 对IE的兼容性较好
+    // textContent虽然作为标准方法但是只支持IE8+以上的浏览器
+    // 最新的浏览器，两个都可以使用
+    testDiv.innerText = '<span style="color:red">RED</span>'
+
+  </script>
+</body>
+
+</html>

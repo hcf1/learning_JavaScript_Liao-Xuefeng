@@ -1,0 +1,65 @@
+<html>
+
+<head></head>
+
+<body>
+  <!-- appendChild，把一个子节点添加到父节点的最后一个子节点 -->
+  <!-- HTML结构 -->
+  <p id="js">JavaScript</p>
+  <div id="list">
+    <p id="java">Java</p>
+    <p id="python">Python</p>
+    <p id="scheme">Scheme</p>
+  </div>
+  <script>
+    var
+      js = document.getElementById('js'),
+      list = document.getElementById('list');
+    //   在div后面再增加一个p
+    list.appendChild(js);
+    // 新建一个节点并插入，输入元素名
+    var haskell = document.createElement('p');
+    haskell.innerText = 'Haskell';
+    list.appendChild(haskell);
+    // 动态添加css定义,将所有p标签的样式设置为蓝色
+    var d = document.createElement("style")
+    d.setAttribute('type', 'text/css')
+    d.innerHTML = 'p{color:blue}'
+    // Java
+
+    // Python
+
+    // Scheme
+
+    // JavaScript
+
+    // Haskell
+    document.getElementsByTagName('head')[0].appendChild(d);
+    // 把c插入到Python之前
+    var c = document.createElement('p')
+    c.innerText = 'C'
+    list.insertBefore(c, document.getElementById('python'));
+    // Java
+
+    // C
+
+    // Python
+
+    // Scheme
+
+    // JavaScript
+
+    // Haskell
+    // 遍历dom节点
+    var
+      i, c,
+      list = document.getElementById('list');
+    for (i = 0; i < list.children.length; i++) {
+      c = list.children[i]; // 拿到第i个子节点
+      console.log(c);
+    }
+    
+  </script>
+</body>
+
+</html>
