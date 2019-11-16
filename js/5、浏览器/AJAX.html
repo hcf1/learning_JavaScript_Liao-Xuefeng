@@ -1,0 +1,81 @@
+<html>
+<!-- XMLHttpRequest 对象
+所有现代浏览器均支持 XMLHttpRequest 对象（IE5 和 IE6 使用 ActiveXObject）。
+XMLHttpRequest 用于在后台与服务器交换数据。这意味着可以在不重新加载整个网页的情况下，
+对网页的某部分进行更新。 -->
+<body>
+  <script>
+    //   创建 XMLHttpRequest 对象的语法：
+    variable = new XMLHttpRequest();
+    //   老版本的 Internet Explorer （IE5 和 IE6）使用 ActiveX 对象：
+    // variable=new ActiveXObject("Microsoft.XMLHTTP");
+    // -------------------------------------------------------------------------------------
+  </script>
+  POST方式发送请求
+  <h2>AJAX</h2>
+  <button type="button" onclick="loadXMLDoc()">请求数据</button>
+  <div id="myDiv"></div>
+  <script type="text/javascript">
+    function loadXMLDoc() {
+    // 为了应对所有的现代浏览器， 包括 IE5 和 IE6， 请检查浏览器是否支持 XMLHttpRequest 对象。
+    // 如果支持， 则创建 XMLHttpRequest 对象。 如果不支持， 则创建 ActiveXObject：
+      var xmlhttp;
+      if (window.XMLHttpRequest) { // code for IE7+, Firefox, Chrome, Opera, Safari
+        xmlhttp = new XMLHttpRequest();
+      } else { // code for IE6, IE5
+        xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+      }
+      xmlhttp.onreadystatechange = function () {
+        if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+          document.getElementById("myDiv").innerHTML = xmlhttp.responseText;
+        }
+      }
+// XMLHttpRequest对象的open()方法有3个参数，第一个参数指定是GET还是POST，第二个参数指定URL地址，第三个参数指定是否使用异步，默认是true，所以不用写。
+// 注意，千万不要把第三个参数指定为false，否则浏览器将停止响应，直到AJAX请求完成。如果这个请求耗时10秒，那么10秒内你会发现浏览器处于“假死”状态。
+// 最后调用send()方法才真正发送请求。GET请求不需要参数，POST请求需要把body部分以字符串或者FormData对象传进去。
+      xmlhttp.open("POST", "https://www.w3school.com.cn/ajax/demo_post2.asp", true);
+    //   xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+      xmlhttp.send("fname=Bill&lname=Gates");
+    }
+
+  </script>
+</body>
+<!-- <body>
+  <script>
+    function success(text) {
+      var textarea = document.getElementById('test-ie-response-text');
+      textarea.value = text;
+    }
+
+    function fail(code) {
+      var textarea = document.getElementById('test-ie-response-text');
+      textarea.value = 'Error code: ' + code;
+    }
+
+    var request = new ActiveXObject('Microsoft.XMLHTTP'); // 新建Microsoft.XMLHTTP对象
+
+    request.onreadystatechange = function () { // 状态发生变化时，函数被回调
+      if (request.readyState === 4) { // 成功完成
+        // 判断响应结果:
+        if (request.status === 200) {
+          // 成功，通过responseText拿到响应的文本:
+          return success(request.responseText);
+        } else {
+          // 失败，根据响应码判断失败原因:
+          return fail(request.status);
+        }
+      } else {
+        // HTTP请求还在继续...
+      }
+    }
+
+    // 发送请求:
+    request.open('GET', '/api/categories');
+    request.send();
+
+    alert('请求已发送，请等待响应...');
+
+  </script>
+</body> -->
+
+</html>

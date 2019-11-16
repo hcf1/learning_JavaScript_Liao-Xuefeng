@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5909ba7a-a2e4-4b46-9c43-67562a78c9bb" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/js/5、浏览器/AJAX-1.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/3、标准对象/date、regexp、json.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/3、标准对象/date、regexp、json.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/5、浏览器/操作表单.html" beforeDir="false" afterPath="$PROJECT_DIR$/js/5、浏览器/操作表单.html" afterDir="false" />
     </list>
     <list id="4e357464-b787-476d-b6ba-4b0a6301a7db" name="1" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -14,8 +17,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -70,11 +73,11 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Node.js.date、regexp、json.js">
-    <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/廖雪峰JavaScript/js/1、快速入门/index.html" useBuiltInWebServerPort="true">
+  <component name="RunManager" selected="JavaScript Debug.操作文件-1.html">
+    <configuration name="操作文件-1.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/廖雪峰JavaScript/js/5、浏览器/操作文件-1.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
-    <configuration name="变量,常量,解构,作用域.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/js/2、函数/变量,常量,解构,作用域.js" working-dir="$PROJECT_DIR$/js/2、函数">
+    <configuration name="1.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="1.js" working-dir="$PROJECT_DIR$/js/5、浏览器">
       <method v="2" />
     </configuration>
     <configuration name="高阶,以函数作参数.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="高阶,以函数作参数.js" working-dir="$PROJECT_DIR$/js/2、函数">
@@ -90,19 +93,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="JavaScript Debug.index.html" />
-      <item itemvalue="Node.js.变量,常量,解构,作用域.js" />
       <item itemvalue="Node.js.高阶,以函数作参数.js" />
       <item itemvalue="Node.js.方法,this,装饰器.js" />
       <item itemvalue="Node.js.date、regexp、json.js" />
+      <item itemvalue="JavaScript Debug.操作文件-1.html" />
+      <item itemvalue="Node.js.1.js" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.操作文件-1.html" />
+        <item itemvalue="Node.js.1.js" />
         <item itemvalue="Node.js.date、regexp、json.js" />
         <item itemvalue="Node.js.高阶,以函数作参数.js" />
         <item itemvalue="Node.js.方法,this,装饰器.js" />
-        <item itemvalue="Node.js.变量,常量,解构,作用域.js" />
-        <item itemvalue="JavaScript Debug.index.html" />
       </list>
     </recent_temporary>
   </component>
@@ -129,7 +132,8 @@
       <workItem from="1569305029229" duration="1540000" />
       <workItem from="1569310093669" duration="107000" />
       <workItem from="1569310305301" duration="4784000" />
-      <workItem from="1569986651916" duration="1353000" />
+      <workItem from="1569986651916" duration="1360000" />
+      <workItem from="1570435422487" duration="3944000" />
     </task>
     <servers />
   </component>

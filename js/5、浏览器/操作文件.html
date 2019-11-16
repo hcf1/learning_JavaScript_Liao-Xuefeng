@@ -1,0 +1,92 @@
+<html>
+
+<body>
+  <!-- 在HTML表单中，可以上传文件的唯一控件就是<input type="file">。 -->
+  <!-- 当一个表单包含<input type="file">时，表单的enctype必须指定为multipart/form-data，
+  method必须指定为post，浏览器才能正确编码并以multipart/form-data格式发送表单的数据。
+  出于安全考虑，浏览器只允许用户点击<input type="file">来选择本地文件，
+  用JavaScript对<input type="file">的value赋值是没有任何效果的。当用户选择了上传某个文件后，
+  JavaScript也无法获得该文件的真实路径： -->
+  对文件扩展名做检查
+  <!--这里return的作用就是对receive函数运行返回的结果，再向上返回，
+    以便能在发现错误时即使停止后面继续将错误的数据拿去运行.
+    如果onsubmit='boole'只能算是把false或者true字符串赋值给onSubmit。并不具有一定的功能，
+    即不论表单中是否出现错误，都会继续运行下去。 -->
+  <!--例如： 
+  <input type="text" οnkeypress="return false;" />将使该输入框无法输入字符`
+  <input type="button" οnclick="return false;" />将使该按钮的点击无效` -->
+  <form action="#" id="form" onsubmit="return test1()">
+    <input type="file" name="test-file-upload" id="test-file-upload" multiple='true'>
+    <!-- 以下两个按钮都可以直接提交表单的内容 -->
+    <input type="submit" value="提交1">
+    <button type="submit" value="提交1">提交2</button>
+  </form>
+  <script>
+    function test1() {
+      var f = document.getElementById('test-file-upload');
+      var filename = f.value; // 'C:\fakepath\test.png'
+      if (!filename || !(filename.endsWith('.jpg') || filename.endsWith('.png') || filename.endsWith('.gif'))) {
+        alert('Can only upload image file.');
+        return false;
+
+      } else {
+        alert("图片文件提交成功！");
+      }
+
+    }
+
+  </script>
+  File API，图像预览
+  <form method="post" action="http://localhost/test" enctype="multipart/form-data">
+    <p>图片预览：</p>
+    <p>
+      <div id="test-image-preview"
+        style="border: 1px solid #ccc; width: 100%; height: 200px; background-size: contain; background-repeat: no-repeat; background-position: center center;">
+      </div>
+    </p>
+    <p>
+      <input type="file" id="test-image-file" name="test">
+    </p>
+    <p id="test-file-info"></p>
+  </form>
+  <script>
+    var
+      fileInput = document.getElementById('test-image-file'),
+      info = document.getElementById('test-file-info'),
+      preview = document.getElementById('test-image-preview');
+    // 监听change事件:
+    fileInput.addEventListener('change', function () {
+      // 清除背景图片:
+      preview.style.backgroundImage = '';
+      // 检查文件是否选择:
+      if (!fileInput.value) {
+        info.innerHTML = '没有选择文件';
+        return;
+      }
+      // 获取File引用，仅当类型为file时有files属性:
+      var file = fileInput.files[0];
+      // 获取File信息:
+      info.innerHTML = '文件: ' + file.name + '<br>' +
+        '大小: ' + file.size + '<br>' +
+        '修改: ' + file.lastModifiedDate;
+      if (file.type !== 'image/jpeg' && file.type !== 'image/png' && file.type !== 'image/gif') {
+        alert('不是有效的图片文件!');
+        return;
+      }
+      // 读取文件:
+      var reader = new FileReader();
+      // 异步操作，回调函数onload表示读取完成且成功时执行后面的函数，e代表event
+      reader.onload = function (e) {
+        var
+          // 事件产生的结果，e.target表示事件绑定的对象(fileInput),result是读取结果---图片的路径
+          data = e.target.result; // 'data:image/jpeg;base64,/9j/4AAQSk...(base64编码)...'            
+        preview.style.backgroundImage = 'url(' + data + ')';
+      };
+      // 先以DataURL的形式读取文件，在result中生成一个URL格式的字符串:
+      reader.readAsDataURL(file);
+    });
+
+  </script>
+</body>
+
+</html>

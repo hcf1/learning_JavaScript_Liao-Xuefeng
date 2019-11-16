@@ -32,7 +32,7 @@ function product(arr) {
 }
 
 console.log(product([1, 2, 3, 4]))
-// filter作用域每个元素，根据true or false过滤指定元素，返回剩余的元素------
+// filter作用域每个元素，根据true or false过滤指定元素，true返回剩余的元素------
 // return s && s.trim(); // 注意：IE9以下的版本没有trim()方法，可去除空格
 // trim()方法删除字符串头尾空格，返回删除后的结果，不改变原来的字符串
 var arr = [1, 2, 4, 5, 6, 9, 10, 15];
@@ -41,6 +41,12 @@ var r = arr.filter(function (x) {
   return x % 2 !== 0;
 });
 console.log(r); // [1, 5, 9, 15]
+//去重
+var r,arr = ['ss',['dd'],'ss']//[ 'ss', [ 'dd' ] ]
+r=arr.filter(function(value,index,number){
+  return number.indexOf(value)===index//如果number中出现第一个value值的索引等于它的索引
+})
+console.log(r);
 // 排序算法:满足对于两个元素x和y，如果认为x < y，返回-1或小于0的数，x==y，返回0
 // sort方法会先将所有元素先转换为String再排序，结果'10'排在了'2'的前面
 // 因为字符'1'比字符'2'的ASCII码小。---------------------------------------
@@ -49,21 +55,22 @@ console.log([10, 20, 1, 2].sort()); // [1, 10, 2, 20]
 var b = [10, 20, 1, 2]
 b.sort(function (x, y) {
   if (x > y) {
-    return 0.001;
+    return 0.001;//1
   }
   else if (x < y) {
-    return -0.1;
+    return -0.1;//-1.小于 0 ，那么 x 会被排列到 y 之前；
   }
   else {
     return 0;
   }
 })
+//sort会直接对当前Array进行修改，返回本身
 console.log("排序结果："+b);
 // every，可以判断数组的所有元素是否满足测试条件。----------------------------
 console.log([0, 0,'sfaf','dd'].every(function(x) {
   return x.length > 1;
 }))//返回true or false
-// find 查找符合条件的第一个元素，如果找到了，返回这个元素，否则，返回undefined---
+// find 方法返回数组中满足提供的测试函数的第一个元素的值。否则返回 undefined---
 var arr = ['Apple', 'pear', 'orange'];
 console.log(arr.find(function (s) {
     return s.toLowerCase() === s;
@@ -83,4 +90,4 @@ console.log(arr.findIndex(function (s) {
 })); // -1
 // forEach和map类似常用于遍历数组，传入的函数不需要返回值----------------------
 var arr = ['Apple', 'pear', 'orange'];
-arr.forEach(console.log); // 依次打印每个元素
+arr.forEach(console.log); // 依次打印每个元素,自动接收第一个参数

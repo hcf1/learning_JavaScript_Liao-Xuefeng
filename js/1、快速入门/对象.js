@@ -11,7 +11,8 @@ delete xiaoming.name
 console.log(xiaoming)
 // 判断对象是否有某个属性,如果是继承属性也是true
 console.log('age' in xiaoming)
-// map键值对，支持以任意类型作为键，对象中只能是字符串作为属性名
+// map和set都是es6特性
+// map键值对，支持以 任意类型 作为键，对象中只能是字符串作为属性名
 var m = new Map([
   ["dd", 88],
   [8, 'ff']
@@ -20,8 +21,8 @@ console.log(m.get('dd'), m.get(8))
 // map添加和删除
 m.set(9, 999)
 m.delete('dd')
-console.log(m)
-// set与map相似，但无value值
+console.log(m,m.has(8))
+// set与map相似，但无value值(无键值对，相当于数组对象)
 var s = new Set([
   [1, 's', m]
 ])
@@ -30,7 +31,7 @@ console.log(s)
 s.delete('d')
 console.log(s)
 // iterable，可迭代的对象，Array、Map和Set都属于iterable类型
-// for...of结构不会遍历全部对象属性，只循环集合本身的元素
+// for...of，es6特性，该结构不会遍历对象属性名称或（索引），只循环集合本身的元素（值）
 var a = ['A', 'B', 'C'];
 a.name = 'Hello';
 for (var x in a) {
@@ -51,4 +52,19 @@ a2.forEach(function (element, index, array) {
   console.log(element, index, array);
 });
 // Set与Array类似，但Set没有索引，因此回调函数的前两个参数都是元素本身：
+console.log("set的值：",s);
+s.forEach(function(value, index, array){
+  console.log(value,index, array);//输出的value和index都是元素本身
+})
 // Map的回调函数参数依次为value、key和map本身：
+console.log("map的值："+m);
+m.forEach(function(value, index, array){
+  console.log(value,index, array);
+})
+// 要过滤掉对象继承的属性，用hasOwnProperty()来实现------------------
+for (var key in a2){
+  if (a2.hasOwnProperty(key)) {
+    console.log(key);//仅输出索引值
+    console.log(a2[key]);//输出值
+  }
+}

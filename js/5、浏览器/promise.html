@@ -1,0 +1,69 @@
+<!-- 在JavaScript的世界中，所有代码都是单线程执行的。
+由于这个“缺陷”，导致JavaScript的所有网络操作，浏览器事件，都必须是异步执行。
+异步执行可以用回调函数实现： -->
+<script>
+  // 异步执行，object延迟3秒运行
+  function callback() {
+    console.log('3秒后执行的结果')
+  }
+  console.log('开始执行');
+  setTimeout(callback, 3000)
+  console.log('延迟3秒执行');
+  // =========================AJAX就是典型的异步操作
+  function success(params) {
+      console.log(params);
+  }
+  function fail(params) {
+      console.log(params);
+  }
+  request=new XMLHttpRequest()
+  request.onreadystatechange = function () {
+    if (request.readyState === 4) {
+      if (request.status === 200) {
+        return success(request.responseText);
+      } else {
+        return fail(request.status);
+      }
+    }
+  }
+
+</script>
+<!-- ==============================更好的异步操作写法 -->
+<!-- 因为 Promise.prototype.then 和  Promise.prototype.catch 方法返回promise 对象， 
+    所以它们可以被链式调用。 -->
+<script>
+// ###############
+// Promise.prototype.catch(onRejected)
+// 添加一个拒绝(rejection) 回调到当前 promise, 返回一个新的promise。当这个回调函数被调用，
+// 新 promise 将以它的返回值来resolve，否则如果当前promise 进入fulfilled状态，
+// 则以当前promise的完成结果作为新promise的完成结果.
+// ###############
+// Promise.prototype.then(onFulfilled, onRejected)
+// 添加解决(fulfillment)和拒绝(rejection)回调到当前 promise, 返回一个新的 promise, 
+// 将以回调的返回值来resolve.
+// ################
+// Promise.prototype.finally(onFinally)
+// 添加一个事件处理回调于当前promise对象，并且在原promise对象解析完毕后，返回一个新的promise对象。
+// 回调会在当前promise运行完毕后被调用，无论当前promise的状态是完成(fulfilled)还是失败(rejected)
+  new Promise(function (resolve, reject) {
+    console.log('start new Promise...');
+    var timeOut = Math.random() * 2;
+    console.log('set timeout to: ' + timeOut + ' seconds.');
+    setTimeout(function () {
+      if (timeOut < 1) {
+        console.log('call resolve()...');
+        // 作为promise.then中的第一个参数
+        resolve('200 OK');
+      } else {
+        console.log('call reject()...');
+        // 作为promise.catch中的第一个参数，promise.then中的第二个参数
+        reject('timeout in ' + timeOut + ' seconds.');
+      }
+    }, timeOut * 1000);
+  }).then(function (r) {
+    console.log('Done: ' + r);
+  }).catch(function (reason) {
+    console.log('Failed: ' + reason);
+  });
+
+</script>

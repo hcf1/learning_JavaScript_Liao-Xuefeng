@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+/* global ActiveXObject */
+<html>
+图片预览
+
+<head>
+  <meta name="viewport" content="width=device-width,initial-scale=1, user-scalable=no">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="format-detection" content="telephone=no">
+  <title>test</title>
+  <script>
+    //选择图片时预览功能
+    function imageshow(source) {
+      var file = source.files[0];
+      var imageid = source.id;
+      if (window.FileReader) {
+        var fr = new FileReader();
+        fr.onloadend = function (e) {
+          document.getElementById("portrait" + imageid).src = e.target.result;
+        };
+        fr.readAsDataURL(file);
+      }
+      document.getElementById("image" + imageid).style.display = "none";
+      document.getElementById("show" + imageid).style.display = "block";
+    }
+
+  </script>
+</head>
+
+<body>
+  <div>
+    <div id="image1">
+      　　　　　　<p>上传截图</p>
+      <input type="file" name="screenshot1" id="1" onchange="imageshow(this)" />
+    </div>
+    　　　　<div id="show1" style="display:none;">
+      　　　　　　<img src="" id="portrait1" width="100" height="70">
+      　　　　</div>
+    　　　　<div id="image2">
+      <p>上传截图</p>
+      <input type="file" name="screenshot2" id="2" onchange="imageshow(this)" />
+    </div>
+    　　　 <div id="show2" style="display:none;">
+      　　　　　　<img src="" id="portrait2" width="100" height="70">
+      　　　</div>
+    <div id="image3">
+      <p>上传截图</p>
+      <input type="file" name="screenshot3" id="3" onchange="imageshow(this)" />
+    </div>
+    　　<div id="show3" style="display:none;">
+      　　　　　　<img src="" id="portrait3" width="100" height="70">
+      　　　　</div>
+  </div>
+  <!-- 点击改变t2的值=========================================================== -->
+  <table id="outside">
+    <tr>
+      <td id="t1">one</td>
+    </tr>
+    <tr>
+      <td id="t2">two</td>
+    </tr>
+  </table>
+  // 改变t2的函数
+  <script>
+    function modifyText() {
+      var t2 = document.getElementById("t2");
+      // 无value属性
+      if (t2.firstChild.nodeValue == "three") {
+        t2.firstChild.nodeValue = "two";
+      } else {
+        t2.firstChild.nodeValue = "three";
+      }
+    }
+
+    // 为table添加事件监听器
+    var el = document.getElementById("outside");
+    el.addEventListener("click", modifyText, false);
+// 启用计算器，仅ie浏览器支持activexobject=========================================
+    function runcalc() {
+      var calc = new ActiveXObject("WScript.shell");
+      calc.Run("calc");
+    }
+    runcalc()
+
+  </script>
+</body>
+
+</html>

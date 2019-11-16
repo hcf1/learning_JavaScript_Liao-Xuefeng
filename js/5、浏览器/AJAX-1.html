@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+同源策略：
+请求的url地址,必须与浏览器上的url地址处于同域上,也就是域名,端口,协议相同.
+<!-- jsonp的产生:
+
+1.AJAX直接请求普通文件存在跨域无权限访问的问题,不管是静态页面也好.
+
+2.不过我们在调用js文件的时候又不受跨域影响,比如引入jquery框架的,或者是调用相片的时候
+
+3.凡是拥有scr这个属性的标签都可以跨域例如<script><img><iframe>
+
+4.如果想通过纯web端跨域访问数据只有一种可能,那就是把远程服务器上的数据装进js格式的文件里.
+
+5.而json又是一个轻量级的数据格式,还被js原生支持
+
+6.为了便于客户端使用数据，逐渐形成了一种非正式传输协议，人们把它称作JSONP，该协议的一个要点就是允许用户传递一个callback 参数给服务端， -->
+通过jsonp的方式跨域请求资源
+
+<head>
+  <meta charset="UTF-8">
+  <!-- 通过script标签实现跨域 -->
+  <script type="text/javascript" src="https://csdnimg.cn/public/common/libs/jquery/jquery-1.9.1.min.js"></script>
+</head>
+
+<body>
+  <!-- 通过iframe来跨子域 -->
+  <iframe id='a' src='https://csdnimg.cn/public/common/libs/jquery/jquery-1.9.1.min.js' οnlοad='test()'></iframe>
+  <script>
+    function test() {
+      alert(document.getElementById('a').contentWindow);
+    }
+
+  </script>
+  <!-- 基于jquery跨域 -->
+  <!-- 例1、script标签动态脚本实现跨域 -->
+  <script>
+    var url = "https://www.w3.org/analytics/piwik/matomo.js";
+    var script = document.createElement('script');
+    script.setAttribute('src', url);
+    document.getElementsByTagName('head')[0].appendChild(script);
+
+  </script>
+  <!-- 例2、script标签动态脚本实现跨域 -->
+  <p id="test-jsonp"></p>
+  <script>
+    // 回调函数自动执行，refreshPrice({"0000001":{"code": "0000001", "percent": -0.009....})
+    // 同名函数返回的键值对可以直接使用其值
+    function refreshPrice(data) {
+      var p = document.getElementById('test-jsonp');
+      p.innerHTML = '当前价格：' +
+        data['0000001'].name + ': ' +
+        data['0000001'].price + '；' +
+        data['1399001'].name + ': ' +
+        data['1399001'].price;
+    }
+
+    function getPrice() {
+      var
+        js = document.createElement('script'),
+        head = document.getElementsByTagName('head')[0];
+      js.src = 'http://api.money.126.net/data/feed/0000001,1399001?callback=refreshPrice';
+      head.appendChild(js);
+    }
+    getPrice()
+
+  </script>
+  <!-- 例3、script标签动态脚本实现跨域 -->
+  <script>
+    // 得到航班信息查询结果后的回调函数
+    var flightHandler = function (data) {
+      alert('你查询的航班结果是：票价 ' + data.price + ' 元，' + '余票 ' + data.tickets + ' 张。');
+    };
+    // 提供jsonp服务的url地址（不管是什么类型的地址，最终生成的返回值都是一段javascript代码）
+    // 调用的url中传递了一个code参数，告诉服务器我要查的是CA1998次航班的信息，而callback参数则告诉服务器，
+    // 我的本地回调函数叫做flightHandler。
+    var url = "http://flightQuery.com/jsonp/flightResult.aspx?code=CA1998&callback=flightHandler";
+    // 创建script标签，设置其属性
+    var script = document.createElement('script');
+    script.setAttribute('src', url);
+    // 把script标签加入head，此时调用开始
+    document.getElementsByTagName('head')[0].appendChild(script);
+
+  </script>
+  CORS全称Cross-Origin Resource Sharing，是HTML5规范定义的如何跨域访问资源。
+  <!-- 假设本域是my.com，外域是sina.com，只要响应头Access-Control-Allow-Origin为http://my.com，或者是*，本次请求就可以成功。
+可见，跨域能否成功，取决于对方服务器是否愿意给你设置一个正确的Access-Control-Allow-Origin，决定权始终在对方手中。
+上面这种跨域请求，称之为“简单请求”。简单请求包括GET、HEAD和POST（POST的Content-Type类型 仅限application/x-www-form-urlencoded、
+multipart/form-data和text/plain），并且不能出现任何自定义头（例如，X-Custom: 12345），通常能满足90%的需求。 -->
+</body>
+
+</html>
